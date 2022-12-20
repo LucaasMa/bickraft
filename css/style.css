@@ -112,6 +112,18 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0px 40px;
+    max-width: 1200px;
+    box-sizing: border-box;
+    /* para dar mais espaco na tela*/
+    padding-left: 20px;
+    padding-right: 20px;
+    /* para tela crescer junto*/
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.introducao h1 span{
+    color: #FFBB00;
 }
 
 .introducao-conteudo{
@@ -130,4 +142,22 @@ img{
     font-size: 24px;
     line-height: 1.5;
     color: #b2b2b2;
+}
+
+.introducao a {
+    padding: 16px 32px;
+    background: linear-gradient(#FFBF00,#F2A50C);
+    /*ajusta posicao*/
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.1);
+    text-transform: uppercase;
+    color: #332200;
+    font-size: 18px;
+    line-height: 1.33;
+    font-weight: bold;
+}
+
+.introducao a:hover{
+    background: linear-gradient(#ffb60d, #e59317);
 }
