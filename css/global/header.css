@@ -1,0 +1,80 @@
+.header-bg{
+    background: #000000;
+}
+
+.header{
+    /* para colocar um do lado do outro*/
+    display: flex;
+    /*para quebrar de linha se tela pequena*/
+    flex-wrap: wrap;
+    /*para colocar um pra cada lado*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /*para nao contar com o padding a largura da tela*/
+    box-sizing: border-box;
+    max-width: 1200px;
+    /*para crescer junto com a tela*/
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+}
+
+.header-menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.header-menu a{
+    /*melhor pra acertar com o dedo*/
+    padding: 16px 0px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 18px;
+    position: relative;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.header-menu a::after{
+    content: "";
+    display: block;
+    height: 2px;
+    /*altura do elemento pai*/
+    width: 0px;
+    background: #ffffff;
+    transition: 0.3s;
+    margin-top: 4px;
+    /* para ele n afetar o tamanho do header, precisa de position relative no pai*/
+    position: absolute;
+}
+
+.header-menu a:hover::after{
+    width: 100%;
+}
+
+/*basicamente mobile*/
+@media (max-width: 800px) {
+     .header-menu a{
+        background: #111111;
+        padding: 12px 16px;
+        border-radius: 4px;
+     }
+}
+
+@media (max-width: 400px) {
+    .header-menu{
+        gap: 12px;
+    }
+    .header-menu a{
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .header-menu a:hover{
+        background: #2e2e2e;
+    }
+    .header a::after{
+        display: none;
+    }
+}
